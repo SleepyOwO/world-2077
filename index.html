@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Мир 2077</title>
+        <link rel="SHORTCUT ICON" href="image/ico.ico" type="image/x-icon">
+        <style>
+            ::-webkit-scrollbar-track {
+                background-color:rgb(52, 52, 52);
+                box-shadow:0px 0px 3px #000 inset;
+            }
+            ::-webkit-scrollbar-thumb {
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+                background-color:rgb(102, 102, 102);
+            }
+            ::-webkit-scrollbar{
+                width: 13px;
+            }
+             @font-face{
+                font-family: Xirod;
+                src: url(fonts/Xirod.ttf);
+            }
+            @font-face{
+                font-family: Handwrite;
+                src: url(fonts/ofont.ru_AmadeusAP.ttf);
+            }
+            h1{
+                text-shadow: 0.5vw 0 black;
+                margin-top: 2vw;
+                text-align: center;
+                font-size: 3vw;
+                font-family: Xirod;
+                color: rgb(94, 94, 94);
+            }
+            h2{
+                font-size: 4vw;
+                float: left;
+                margin-left: 1vw;
+                color: black;
+                text-shadow: 0.2vw 0 rgb(196, 196, 196);
+            }
+            body{
+                background-size: cover;
+                background-attachment: fixed;
+                background-image: url(image/bg1.jpg);
+                transition: 1s;
+            }
+            article{
+                float: left;
+                margin-left: 1vw;
+                text-align: left;
+                font-family: Handwrite;
+                font-size: 3.5vw;
+                
+            }
+            details{
+                width: fit-content;
+                margin: auto;
+                text-align: center;
+                font-family: Handwrite;
+                font-size: 3.3vw;
+                margin-top: 2vw;
+                outline: none;
+            }
+            nav{
+                top: 20px;
+                font-size: 2vw;
+                float: right;
+                margin-right: 1vw;
+                position: sticky;
+                background-color: rgba(128, 128, 128, 0.6);
+            }
+            section{
+                /*visibility: hidden;*/
+                float: left;
+                margin-left: 1vw;
+                border-radius: 1vw;
+                width: 65vw;
+                background-color: rgba(128, 128, 128, 0.7);
+                height: fit-content;
+                margin-top: 3vh;
+            }
+        </style>
+        <script>
+            var f=0
+            function cbg(){
+                t=document.querySelector(".change").getBoundingClientRect().top
+                console.log(t)
+                if (t<-20) {
+                    document.querySelector(".inv").style.visibility="visible"
+                }
+                if (t<-750 && f!=1) {
+                    document.querySelector(".change").style.backgroundImage="url(image/bg2.jpg)"
+                    document.getElementById("1").innerHTML="Wellcome to the war"
+                    f=1
+                }
+                if (t<-1650) {
+                    document.querySelector(".change").style.backgroundImage="url(image/bg3.jpg)"
+                    document.getElementById("1").innerHTML="Wellcome to the future"
+                    
+                }
+            }
+            </script>
+    </head>
+    <body class="change" onscroll="cbg()">
+        <header>
+            <h1 id="1">Wellcome to the present</h1>
+        </header>
+        <section class="inv">
+        <details>Данный сайт представляет собой чистой воды фантазию и ничего более. Большая часть информации лишь плод воображения и догадок автора. Приятного ознакомления!</details>
+        <h2>Эпизод первый: Начало. Настоящее время</h2>
+        <article>
+            На дворе 2021 год, весна и ничего не беспокоит простых людей. <br> 
+            Страны развиваются: развивается промышленность, создаются новые технологии, производятся необходимые ресурсы. <br>
+            С каждым днём рабочие разных государств всё глубже и глубже уходят в Землю в поисках ресурсов и истощают недры планеты. <br>
+            Между Россией и Америкой начинают возникать разногласия из-за поставок газа Россией в Европу, но это только начало грядущих событий....
+        </article>
+        </section>
+        <section class="inv2">
+            <h2>Эпизод второй: Третья мировая. 2073 год</h2>
+            <article>
+                Спустя пару лет конфликты начали возникать и между другими странами.<br> 
+                Планета истощалась и ресурсов стало не хватать, государства изо всех сил старались сохранить и скупить как можно больше сырья и полезных ресурсов, но это лишь отсрочило неминуемое...<br>
+                В течение 40 лет сильнейшие державы готовились к неизбежной войне и в 2073 году раздался первый грохот ядерной бомбы.<br> 
+                В этой войне не было непричастных или нейтральных государств, учавствовали все, кто смог уцелеть.
+            </article>
+        </section>
+        <section class="inv3">
+            <h2>Эпизод третий: Будущее прошло мимо нас. 2077 год</h2>
+            <article>
+                После того как 10 ядерных держав "спустили псов" в попытке выжить, вся жизнь на планете была истреблена в мгновение ока. Пали города и страны, миллиарды людей были стёрты с лица земли их же руками.<br>
+                Добро пожаловать в будущее, господа!<br>
+                В будущее, где нет ни единой души; в будущее, где остались миллионы городов призраков; в будущее, к которому привели последствия бездумных действий людей...
+            </article>
+            <h2>Эпизод четвёртый</h2>
+            <article>
+                Люди день изо дня спорят по пустякам, устраивают побоища, войны, угнетают таких же людей из-за цвета кожи...<br> 
+                Каждую секунду в мире гибнут тысячи человек, многие из них - от руки людей. Мы единственный разумный вид на всей планете, но при этом ничем не отличаемся от животных. Если не стараться изменить мир к лучшему, не стараться исправить ошибки, то в конечном итоге мир обратится в прах
+            </article>
+        </section>
+        <nav>
+        </nav>
+    </body>
+</html>
