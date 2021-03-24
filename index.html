@@ -108,7 +108,6 @@
             function cbg(){
                 t=document.querySelector(".change").getBoundingClientRect().top
                 console.log(t)
-                document.getElementById("inv").style.opacity="1"
                 if (t<-750 && f!=1) {
                     document.querySelector(".change").style.backgroundImage="url(image/bg2.jpg)"
                     document.getElementById("1").innerHTML="Wellcome to the war"
@@ -138,7 +137,7 @@
             <a class="a1" href="#inv3">Эпизод третий</a>
             <a class="a1" href="#4">Эпилог</a>
         </nav>
-        <section id="inv">
+        <section id="inv" style="opacity: 1;">
         <details>Данный сайт представляет собой чистой воды фантазию и ничего более. Большая часть информации лишь плод воображения и догадок автора. Приятного ознакомления!</details>
         <h2>Эпизод первый: Начало. Настоящее время</h2>
         <article>
