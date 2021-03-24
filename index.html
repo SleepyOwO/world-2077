@@ -43,10 +43,10 @@
                 background-size: cover;
                 background-attachment: fixed;
                 background-image: url(image/bg1.jpg);
-                transition: 1s;
+                transition: 1.5s;
             }
             article{
-                float: left;
+                margin-top: 4vh;
                 margin-left: 1vw;
                 text-align: left;
                 font-family: Handwrite;
@@ -63,22 +63,44 @@
                 outline: none;
             }
             nav{
-                top: 20px;
+                opacity: 0;
+                top: 10vh;
+                position: sticky;
+                width: 25vw;
+                border-radius: 1.5vh;
                 font-size: 2vw;
                 float: right;
                 margin-right: 1vw;
-                position: sticky;
-                background-color: rgba(128, 128, 128, 0.6);
+                background-color: rgba(128, 128, 128, 0.7);
+                transition: 1.8s;
+            }
+            .a1{
+                color: black;
+                text-shadow: 0.3vh 0 rgb(196, 196, 196);
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                font-size: 5vh;
+                width: fit-content;
+                height: fit-content;
+                margin-top: 1.8vh;
+                margin-bottom: 1.8vh;
+                margin-left: 3vw;
+            }
+            .a1:hover{
+                transform: scale(1.3);
+                background-color: rgb(90, 90, 90);
+                border-radius: 1.5vh;
             }
             section{
-                /*visibility: hidden;*/
-                float: left;
+                opacity: 0;
                 margin-left: 1vw;
                 border-radius: 1vw;
                 width: 65vw;
                 background-color: rgba(128, 128, 128, 0.7);
                 height: fit-content;
                 margin-top: 3vh;
+                transition: all 1.8s;
             }
         </style>
         <script>
@@ -86,18 +108,22 @@
             function cbg(){
                 t=document.querySelector(".change").getBoundingClientRect().top
                 console.log(t)
-                if (t<-20) {
-                    document.querySelector(".inv").style.visibility="visible"
-                }
+                document.getElementById("inv").style.opacity="1"
                 if (t<-750 && f!=1) {
                     document.querySelector(".change").style.backgroundImage="url(image/bg2.jpg)"
                     document.getElementById("1").innerHTML="Wellcome to the war"
+                    document.querySelector(".inv1").style.opacity="1"
+                    document.getElementById("inv2").style.opacity="1"
                     f=1
                 }
                 if (t<-1650) {
                     document.querySelector(".change").style.backgroundImage="url(image/bg3.jpg)"
                     document.getElementById("1").innerHTML="Wellcome to the future"
+                    document.getElementById("inv3").style.opacity="1"
                     
+                }
+                if (t<-2275){
+                    document.getElementById("4").style.opacity="1"
                 }
             }
             </script>
@@ -106,7 +132,13 @@
         <header>
             <h1 id="1">Wellcome to the present</h1>
         </header>
-        <section class="inv">
+        <nav class="inv1">
+            <a class="a1" href="#inv">Эпизод первый</a>
+            <a class="a1" href="#inv2">Эпизод второй</a>
+            <a class="a1" href="#inv3">Эпизод третий</a>
+            <a class="a1" href="#4">Эпилог</a>
+        </nav>
+        <section id="inv">
         <details>Данный сайт представляет собой чистой воды фантазию и ничего более. Большая часть информации лишь плод воображения и догадок автора. Приятного ознакомления!</details>
         <h2>Эпизод первый: Начало. Настоящее время</h2>
         <article>
@@ -116,7 +148,7 @@
             Между Россией и Америкой начинают возникать разногласия из-за поставок газа Россией в Европу, но это только начало грядущих событий....
         </article>
         </section>
-        <section class="inv2">
+        <section id="inv2">
             <h2>Эпизод второй: Третья мировая. 2073 год</h2>
             <article>
                 Спустя пару лет конфликты начали возникать и между другими странами.<br> 
@@ -125,20 +157,20 @@
                 В этой войне не было непричастных или нейтральных государств, учавствовали все, кто смог уцелеть.
             </article>
         </section>
-        <section class="inv3">
+        <section id="inv3">
             <h2>Эпизод третий: Будущее прошло мимо нас. 2077 год</h2>
             <article>
                 После того как 10 ядерных держав "спустили псов" в попытке выжить, вся жизнь на планете была истреблена в мгновение ока. Пали города и страны, миллиарды людей были стёрты с лица земли их же руками.<br>
                 Добро пожаловать в будущее, господа!<br>
                 В будущее, где нет ни единой души; в будущее, где остались миллионы городов призраков; в будущее, к которому привели последствия бездумных действий людей...
             </article>
-            <h2>Эпизод четвёртый</h2>
+        </section>
+        <section id="4">
+            <h2 style="width: 65vw;">Эпилог.</h2>
             <article>
                 Люди день изо дня спорят по пустякам, устраивают побоища, войны, угнетают таких же людей из-за цвета кожи...<br> 
                 Каждую секунду в мире обрываются тысячи людских жизней, многие из них - от руки людей. Мы единственный разумный вид на всей планете, но при этом ничем не отличаемся от животных. Если не стараться изменить мир к лучшему, не стараться исправить ошибки, то в конечном итоге мир обратится в прах
             </article>
         </section>
-        <nav>
-        </nav>
     </body>
 </html>
